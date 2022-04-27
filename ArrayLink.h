@@ -19,7 +19,7 @@ public:
     virtual ~ArrayLink(){}
 
     void push_back(const T& value) {}
-    void push_ordered(const T& value) {}
+    void insert(int64_t index, const T& value) {}
     void erase(const T& value) {}
 
     Iterator begin() {}

@@ -10,7 +10,7 @@ struct ArrayLinkIterator
 
     ArrayLinkIterator(pointer ptr) : m_ptr(ptr) 
     {
-        array = (m_ptr == nullptr) ? m_ptr: m_ptr[0]; 
+        array = (m_ptr == nullptr) ? m_ptr: &m_ptr[0]; 
     }
     ArrayLinkIterator(const ArrayLinkIterator& other) : m_ptr(other.mptr) {}
 

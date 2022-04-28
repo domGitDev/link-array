@@ -1,10 +1,11 @@
+#include <atomic>
 #include "ArrayLinkIterator.h"
 
 template<typename T>
 struct Node
 {
     T value;
-    int64_t next;
+    std::atomic<int64_t> next;
 };
 
 
@@ -26,6 +27,6 @@ public:
     Iterator end() {}
 
 private:
-    int64_t first;
+    std::atomic<int64_t> first;
     Node<T>* data;
 };

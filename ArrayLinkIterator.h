@@ -15,7 +15,7 @@ struct ArrayLinkIterator
     ArrayLinkIterator(const ArrayLinkIterator& other) : m_ptr(other.mptr) {}
 
     reference operator*() const {return (*m_ptr).value; }
-    pointer operator->() const {return m_ptr->value; }
+    pointer operator->() const {return &(m_ptr->value); }
 
     ArrayLinkIterator& operator++() {
         m_ptr = (m_ptr->next != -1) ? array + m_ptr->next : nullptr;
